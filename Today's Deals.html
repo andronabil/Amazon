@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Deals</title>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width:100%;
+            height: auto;
+            display: inline-block;
+          
+            
+            
+        }
+        #header1 {
+            height: 65px;
+            background: var(--N4QdCheV6mGo, #191d1d);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            
+        }
+        h1, h4 {
+            display: inline-block;
+            margin: 0;
+        }
+        header h1 {
+            color: rgb(239, 245, 245);
+            padding-left: 6px;
+        }
+        header small {
+            font-size: 15.5px;
+            color: white;
+        }
+        #egypt:hover, a:hover, #hello:hover {
+            border: 2px solid white;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+        div {
+            display: inline-block;
+            margin-right: 20px;
+        }
+         span {
+            color: rgb(158, 157, 157);
+            display: block;
+            font-size: 14px;
+            margin-top: 0px;
+        }
+        #search {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            flex-grow: 1;
+        }
+        button {
+            width: 60px;
+            height: 40px;
+            border-radius: 4px;
+            border: none;
+            background-color:rgb(206, 201, 201);
+            color: white;
+        }
+        input[type="search"] {
+            width: 500px;
+            height: 40px;
+            font-size: 18px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+            padding-left: 10px;
+        }
+        #search-icon {
+            font-family: Arial, Sans-Serif;
+            font-size: 25px;
+            color: white;
+            background-color: rgb(248, 178, 47);
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 4px;
+        }
+        #header1 img {
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+            
+            margin:0 15px;
+            
+        }
+        #hello span {
+            color: white;
+            font-size: 17px;
+            margin: 0px;
+            padding: 0px;
+        }
+        #order h1, #cart h1 {
+            font-size: 20px;
+            padding-top: 25px;
+            color: white;
+        }
+        #cart h1 {
+            padding-right: 0px;
+
+        }
+        #egypt{
+            margin: 20px;
+        }
+        #header2{
+            height: 48px;
+            background-color: #232f3e;
+            display: flex;
+    
+        }
+        #header2 div{
+            display: flex;
+            margin: 12px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #ccc;
+            font-family: Arial, sans-serif;
+        }
+        #all p{
+            
+        margin: 0 4px;
+        padding-left: 8px;
+        font-size: 14px;
+        color: beige;
+        }
+        #sale h2  {
+           
+            font-size:smaller;
+             border: 2px solid white; 
+            word-spacing: 2px;
+    background-color: gainsboro;
+    color: black; 
+        }
+        h2 p{
+            display: inline-block;
+            color: orange;
+        }
+        #sale h1{ 
+            font-size: 20px;
+            margin: 0 4px;
+            padding-left: 8px;
+        }
+       #header2 #deal{
+            display: block;
+            margin: 0px;
+            padding: 0px;
+        }
+        #deal p{
+            font-size: 18px;
+            text-align: center;
+        }
+         #all p:hover{
+            color: orange;
+            border: 0px;
+        }
+        #header2 #all a{
+            display: flex;
+            text-decoration: none;
+            border: 0px;
+        }
+        .header3{
+            background-image: url(ard.jpg);
+            width: 100%;
+            height: 130px;
+            cursor: pointer;
+        
+        }
+         .sticker {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin: 20px 0; 
+        
+            
+         }
+        
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
+        .img1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            object-fit: cover;
+
+        }
+        label {
+            margin-top: 5px;
+            font-size: 13px;
+            text-align: center;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+         .item:hover{
+border-radius: 30%;
+background: gainsboro;    
+/* box-shadow: 1px 1px 1px 1px rgb(156, 18, 236);     */
+cursor: pointer;
+width: 110px;
+filter: drop-shadow(0px 10px 5px rgb(159, 26, 248));
+        }
+        .img1:hover{
+            background: gainsboro;
+            width: 130px;
+            height: 130px;
+filter: drop-shadow(0px 2px 5px rgb(193, 19, 247));
+
+            
+        }
+        aside {
+            position: sticky;
+            top: 5px;
+            width: 340px;
+            background-color: white;
+            height: auto;
+            overflow-y: auto;
+            padding: 10px;
+            text-align: left;
+           
+            
+            
+        }
+        .aside-div {
+            display: block;
+            width: 240px;
+            background:white;
+            height: auto;
+           
+           
+        }
+        .dep {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            
+        }
+        .aside-part1-child {
+            display: block; 
+            margin-left: 2px;
+           
+        }
+        .block {
+            display: block;
+            margin-left: 5px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+        .checked {
+            color: orange;
+        }
+        .customer {
+          margin:20px 0px;
+          
+            padding-left: 0px;
+            text-align: left;
+        }
+        .block label{
+            font-size: 14px;
+            font-weight: bolder;
+        }
+        main {
+        margin: 0px;
+        height:auto;
+        width: 1080px;
+        vertical-align: top; 
+        padding: 0px; 
+        background-color: white;
+        float: right;
+        box-sizing: border-box;
+        position: relative;
+        bottom: 580px;
+        padding-left: 7px;
+        display: flex;
+    
+      }
+      main article{
+        width: 250px;
+        height: 350px;
+        background:white;
+        margin: 1px;
+        padding: 1px;
+        float:left;
+       display:inline-block;
+       margin-left: 10px;
+       padding-left:10px ;
+       margin-bottom: 10px;
+         font-family: "Amazon Ember", Arial, sans-serif; 
+      } 
+      .article1{
+        text-align: left;
+        
+      }
+      .art-img1{
+        background-position:center;
+         object-fit:contain; 
+        width: 150px;
+        height: 270px;
+        display: block;
+        position: relative;
+        left: 20px;
+        margin-bottom: 15px;
+        
+      }
+      .deal{
+        background: #cc0c39;;
+    display: inline-block;
+    text-align: left;
+    border: 1px solid #cc0c39;
+    border-radius: 4px;
+    padding: 2px;
+    color: white;
+    font-size: 15px;
+
+      }
+      .em1{
+        display: inline-block;
+        color: #cc0c39;
+        font-weight: 18px;
+
+      }
+      .p1{
+color: black;
+padding-top: 2px;
+      }
+      .art-a1{
+        text-decoration: none;
+      }
+      .p1:hover{
+        color: rgb(218, 144, 8);
+      }
+
+       
+        
+    </style>
+</head>
+<body>
+    <header id="header1">
+        <a href="">
+            <h1>amazon <small>.eg</small></h1>
+        </a>
+        <div id="egypt">
+            <span>Deliver to</span>
+            <span style="color: white; font-size: larger;">Egypt</span>
+        </div>
+        <div id="search">
+            <button type="submit">All</button>
+            <input type="search" placeholder="Search Amazon.eg">
+            <div id="search-icon">&#x26B2;</div>
+        </div>
+        <img src="egypt.jpg" alt="Egypt Flag">
+        <div id="hello">
+            <a href="Signin.html">
+                <span>Hello, sign in</span>
+                <span>Account & Lists</span>
+            </a>
+        </div>
+        <div id="order">
+            <h1>Orders</h1>
+        </div>
+        <div id="cart">
+            <h1>Cart &#128722;</h1>
+        </div>
+    </header>
+    <header id="header2">
+        <div>
+            <p>&#9776;</p>
+            <p>All</p>
+        </div>
+        <div id="all">
+      <a href=""><p>Today's Deals</p></a>
+        <a href=""><p>Prime</p></a>
+        <a href=""><p>Mobile Phone</p></a>
+        <a href=""><p>Electronics</p></a>
+        <a href=""><p>Appliances</p></a>
+        <a href=""><p>Video Games</p></a>
+        <a href=""><p>Fashion</p></a>
+        <a href=""><p>Home</p></a>
+         <a href=""><p>Grocery</p></a>
+        <a href=""><p>Toys&Games</p></a>
+        </div>
+        <div id="sale">
+            <h2>BACK TO SCHOOL <p>SALE</p></h2>
+             <h1>Up to 50% off</h1>
+        </div>
+        <div id="deal">
+        <p>Deals</p>
+        <p>Extended</p>
+        </div>
+    </header>
+    <header class="header3"> </header>
+   
+    <div class="sticker">
+        <div class="item">
+            <img class="img1" src="baby.jpg" alt="baby">
+            <label>baby</label>
+        </div>
+        <div class="item">
+            <img class="img1" src="Beauty.jpg" alt="Beauty">
+            <label>Beauty</label>
+        </div>
+        <div class="item">
+            <img class="img1" src="Books.jpg" alt="Books">
+            <label>Books</label>
+        </div>
+        <div class="item">
+            <img class="img1" src="Camera.jpg" alt="Camera">
+            <label>Camera</label>
+        </div>
+        <div class="item">
+            <img class="img1" src="Coupon.jpg" alt="Coupon">
+            <label>Coupon</label>
+        </div>
+        <div class="item">
+            <img class="img1" src="Coupon.jpg" alt="Coupon">
+            <label>Coupon</label>
+        </div>
+        <div class="item">
+            <img class="img1" src="Entertainment.jpg" alt="Entertainment">
+            <label>Entertainme</label>
+        </div>
+        <div class="item">
+            <img class="img1" src="Eyewear.jpg" alt="Eyewear">
+            <label>Eyewear</label>
+        </div>
+        <div class="item">
+            <img class="img1" src="All_deals.jpg" alt="All Deals">
+            <label>All Deals</label>
+        </div>
+        <div class="item">
+            <img class="img1" src="Automobile.jpg" alt="Automobile">
+            <label  >Automobile</label>
+        </div>
+    </div>
+    
+    <aside>
+        <div class="aside-div">
+            <h4 class="dep">Department</h4>
+            <div class="aside-part1-child"> 
+                <div class="block">
+                    <input type="radio" name="department">
+                    <label for="">All</label>
+                </div>
+                <div class="block">
+                    <input type="radio" name="department">
+                    <label for="">Arts & Crafts</label>
+                </div>
+                <div class="block">
+                    <input type="radio" name="department">
+                    <label for="">Automotive</label>
+                </div>
+                <div class="block">
+                    <input type="radio" name="department">
+                    <label for="">Baby Products</label>
+                </div>
+                <div class="block">
+                    <input type="radio" name="department">
+                    <label for="">Beauty</label>
+                </div>
+            </div> 
+            <div class="customer"></div>
+                <h4>Customer Reviews </h4>
+                <div class="block">
+                    <span class="checked"></span>
+                    <span class="fa fa-star checked"></span> 
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span> <br>
+                    <div id="price2"> 
+                        <span class="checked"></span>
+                        <span class="fa fa-star checked"></span> 
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span> <br>
+                        <div id="price2"> 
+                            <span class="checked"></span>
+                            <span class="fa fa-star checked"></span> 
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> <br>
+                            <div id="price2"> 
+                                <span class="checked"></span>
+                                <span class="fa fa-star checked"></span> 
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span> <br>
+                                <div id="price2"> 
+                                    <span class="checked"></span>
+                                    <span class="fa fa-star checked"></span> 
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span> <br>
+                                    <div id="price2"> 
+                                </div>
+                </div>
+            <div class="aside-div">
+                <h4 class="dep">Department</h4>
+                <div class="aside-part1-child"> 
+                    <div class="block">
+                        <input type="radio" name="department">
+                        <label for="">All</label>
+                    </div>
+                    <div class="block">
+                        <input type="radio" name="department">
+                        <label for="">Under EGP 400</label>
+                    </div>
+                    <div class="block">
+                        <input type="radio" name="department">
+                        <label for="">EGP 400 to EGP 800</label>
+                    </div>
+                    <div class="block">
+                        <input type="radio" name="department">
+                        <label for="">EGP 800 to EGP 1,200</label>
+                    </div>
+                    <div class="block">
+                        <input type="radio" name="department">
+                        <label for="">EGP 1,200 to EGP 1,600</label>
+                    </div>
+                    <div class="block">
+                        <input type="radio" name="department">
+                        <label for="">EGP 1,600 & above</label>
+                    </div>
+                </div>
+        </div>
+        
+    </aside>
+<main>
+    <div class="div-article">
+        <article class="article1">
+            <img class="art-img1" src="1_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="2_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">12% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Dice Boxer For Men Mulit Color- 5 PCS</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="3_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">22% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Lenovo IdeaPad Slim3, AMD Ryzen 5 7520U, 8GB Soldere…</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="4_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">34% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Honor MagicWatch 2 Smartwatch, 14 Day Battery…</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="5_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="6_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="7_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="8_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="9_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="10_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="11_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="12_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="1_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="1_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="1_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+        <article class="article1">
+            <img class="art-img1" src="1_.jpg" alt="">
+           <a  class="art-a1" href="">
+             <p class="deal">18% off</p>
+             <em class="em1">limited time deal</em>
+             <p class="p1">Cacio Fx-570ESPLUS-2WDTV Digital calculater - Black</p>
+           </a >
+        </article>
+    </div class="div-article">
+</main>
+
+</body>
+</html>
